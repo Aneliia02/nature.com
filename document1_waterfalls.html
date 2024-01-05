@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Power.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src= "js/jquery.js"></script>
+     <script src= "js/bootstrap.js"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-
+   OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Водопади</title>
+</head>
+<body class="water">
+    <header>
+        <h1>Природни Забележителности в България</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="document1.html">Начало</a></li>
+            <li><a href="document1_mountains.html">Планини</a></li>
+            <li><a href="document1_waterfalls.html">Водопади</a></li>
+            <li><a href="document1_caves.html">Пещери</a></li>
+            <li><a href="document1_forest.html">Природни паркове</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="slider-container">
+        <div class="slider">
+        <div class="item">
+        <h2>Крушинските водопади</h2>
+        <p>
+         Крушинските водопади се намират в Северна България,
+         близо до село Крушуна, откъдето идва и името им. 
+         Мястото се намира на 28 километра от град Ловеч. 
+         Крушунските водопади са известни със своята живописност. 
+         Образувани са от множество карстови тераси и покрай тях има пътека, 
+         която води до пещерата от която извира водата. До водопадите се 
+         стига много лесно. От площада на село Крушуна се завива надясно и не 
+         след дълго се стиго до място, удобно за паркиране. След това се минава 
+         по пътека, която води до самия голям водопад, където има изградени мостове, 
+         позволяващи на туристите да се полюбуват на природната красота.
+
+        </p>
+        <img src="krushinski.webp" alt="Крушинските водопади">
+        </div>
+        
+        <div class="item">
+        <h2>Каньонът на водопадите при Смолян</h2>
+        <p>
+            Каньонът на водопадите е екопътекa, която се намира на около половин 
+            час западно от град Смолян. Денивелацията на пътеката е около 700 метра, 
+            като най-горната й точка е на около 1800 метра надморскависочина. 
+            Пътеката се вие през гората като метални и живописни дървени мостчета 
+            я прехвърлят туотдясно, ту отляво на Еленска река. Смърчови дървета пък 
+            я обграждат, докато тя се провира покрай скални блокове, наречени Редените 
+            камъни, които природата е извайвала милиони години. Разхождайки се, 
+            неусетно се стига до Вековния бук, имащ диаметър над 4,20 метра. 
+            Пътеката обаче е интересна най-вече заради красивите водопади, които са 46 
+            на брой, като пет от тях са с по-внушителни размери. 
+        </p>
+        <img src="smolqn.jpg" alt="Каньонът на водопадите при Смолян">
+        </div>
+        </div>
+        </div>
+        <button onclick="prevSlide()">Предишен слайд</button>
+<button onclick="nextSlide()">Следващ слайд</button>
+        
+
+<script>
+  var currentSlide = 0;
+
+  function showSlide() {
+    var slides = document.querySelector('.slider');
+    slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  }
+
+  function nextSlide() {
+    var totalSlides = document.querySelectorAll('.item').length;
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    var totalSlides = document.querySelectorAll('.item').length;
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }currentSlide
+
+</script>
+    </section>
+    <!-- Добавете други раздели за планини, водопади, гори и други природни забележителности -->
+    <footer>
+        <p>&copy; 2023 Природни Забележителности</p>
+    </footer>
+</body>
+</html>
